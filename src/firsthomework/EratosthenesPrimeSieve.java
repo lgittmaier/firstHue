@@ -5,6 +5,9 @@
  */
 package firsthomework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author User
@@ -50,7 +53,27 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
         }
     }
     
-    
+    public void primeAlgorithm(){
+        List<Integer> primes = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        
+        for(int i = 2; i <= o; i++){
+            if(isPrime(i)){
+                primes.add(i);
+            }else{
+                list.add(i);
+            }
+        }
+        for(int i: list){
+            for(int x : primes){
+                for(int y: primes){
+                    if((y +x) == i){
+                        System.out.println(i + " Summe:" + i + " = " + x + "+" + y);
+                    }
+                }
+            }
+        }
+    }
     
     
 }
