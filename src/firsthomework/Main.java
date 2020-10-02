@@ -15,7 +15,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        EratosthenesPrimeSieve primeSieve = new EratosthenesPrimeSieve(25);
+        primeSieve.isPrime(5);
+        primeSieve.printPrime();
+        primeSieve.primeAlgorithm();
     }
     
 }
