@@ -35,8 +35,22 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
 
     @Override
     public void printPrime() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(int i = 2; i <= o; i++){
+            boolean prime = true;
+            
+            for(int x = 2; x < i && prime; x++){
+                if((i%x) == 0){
+                    prime = false;
+                }
+            }
+            if(prime){
+            System.out.println(i + "is Prime");
+        }
+        
+        }
     }
+    
+    
     
     
 }
