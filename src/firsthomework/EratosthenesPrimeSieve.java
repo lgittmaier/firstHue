@@ -47,7 +47,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
                 }
             }
             if(prime){
-            System.out.println(i + "is Prime");
+            System.out.println(i + " is Prime");
         }
         
         }
@@ -55,16 +55,16 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
     
     public void primeAlgorithm(){
         List<Integer> primes = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
+        List<Integer> notPrimes = new ArrayList<>();
         
         for(int i = 2; i <= o; i++){
             if(isPrime(i)){
                 primes.add(i);
             }else{
-                list.add(i);
+                notPrimes.add(i);
             }
         }
-        for(int i: list){
+        for(int i: notPrimes){
             for(int x : primes){
                 for(int y: primes){
                     if((y +x) == i){

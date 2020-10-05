@@ -5,6 +5,8 @@
  */
 package firsthomework;
 
+import java.util.Scanner;
+
 /**
  *
  * @author User
@@ -15,8 +17,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        EratosthenesPrimeSieve primeSieve = new EratosthenesPrimeSieve(25);
-        primeSieve.isPrime(5);
+        Scanner s = new Scanner(System.in);
+           System.out.println("Obergrenze festlegen");
+        int o = Integer.parseInt(s.nextLine());
+        
+        EratosthenesPrimeSieve primeSieve = new EratosthenesPrimeSieve(o);
+        
+        primeSieve.isPrime(o);
         primeSieve.printPrime();
         primeSieve.primeAlgorithm();
     }
